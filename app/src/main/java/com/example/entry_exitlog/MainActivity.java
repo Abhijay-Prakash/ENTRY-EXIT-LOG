@@ -1,5 +1,6 @@
 package com.example.entry_exitlog;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -28,10 +29,21 @@ public class MainActivity extends AppCompatActivity {
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String s1,s2;
-                s1=d1.getText().toString();
-                s2=d2.getText().toString();
-                Toast.makeText(getApplicationContext(), s1+""+s2, Toast.LENGTH_SHORT).show();
+             try{
+                 String s1,s2;
+                 s1=d1.getText().toString();
+                 s2=d2.getText().toString();
+                 if(s1.equals("admin") && s2.equals("1234")){
+                     Intent i=new Intent(getApplicationContext(), LogScreen.class);
+                     startActivity(i);
+                 }
+                 else{
+                     Toast.makeText(getApplicationContext(), "Invalid Credentials!", Toast.LENGTH_SHORT).show();
+                 }
+             }
+             catch (Exception e){
+                 Toast.makeText(getApplicationContext(),e.toString()+ "", Toast.LENGTH_SHORT).show();
+             }
             }
         });
     }

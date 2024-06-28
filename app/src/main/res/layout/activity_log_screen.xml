@@ -1,0 +1,72 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="70px"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:layout_width="match_parent"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="35dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="LOG ENTRY"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:text="Name"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/ed1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Name"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ADM NO"/>
+    <EditText
+        android:id="@+id/ed2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your ADM No"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="System No"/>
+    <EditText
+        android:id="@+id/ed3"
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter System No"/>3
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Department"/>
+    <EditText
+        android:id="@+id/ed4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your department name"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt1"
+        android:background="#9D9CCA"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="SUBMIT"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:background="#D97E62"
+        android:textColor="@color/white"
+        android:id="@+id/bt2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LOG OUT"/>
+</LinearLayout>
