@@ -1,6 +1,7 @@
 package com.example.entry_exitlog;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -22,6 +23,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
+
+        SharedPreferences pre=getSharedPreferences("Log",MODE_PRIVATE);
+        String name=pre.getString("user",null);
+        if(name!=null){
+            Intent i=new Intent(getApplicationContext(), LogScreen.class);
+            startActivity(i);
+        }
+
         d1=(EditText) findViewById(R.id.ed1);
         d2=(EditText) findViewById(R.id.ed2);
         b1=(AppCompatButton) findViewById(R.id.bt1);
@@ -34,6 +43,10 @@ public class MainActivity extends AppCompatActivity {
                  s1=d1.getText().toString();
                  s2=d2.getText().toString();
                  if(s1.equals("admin") && s2.equals("1234")){
+                     SharedPreferences pre=getSharedPreferences("Log",MODE_PRIVATE);
+                     SharedPreferences.Editor editor = pre.edit();
+                     editor.putString("user","admin");
+                     editor.apply();
                      Intent i=new Intent(getApplicationContext(), LogScreen.class);
                      startActivity(i);
                  }

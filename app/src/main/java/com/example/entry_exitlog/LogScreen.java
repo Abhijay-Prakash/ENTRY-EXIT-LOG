@@ -1,6 +1,7 @@
 package com.example.entry_exitlog;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -58,6 +59,10 @@ public class LogScreen extends AppCompatActivity {
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                SharedPreferences pre=getSharedPreferences("Log",MODE_PRIVATE);
+                SharedPreferences.Editor editor = pre.edit();
+                editor.clear();
+                editor.apply();
                 Intent i=new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(i);
                 LocalTime currentTime=LocalTime.now();

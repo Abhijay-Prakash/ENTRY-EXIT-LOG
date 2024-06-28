@@ -18,6 +18,7 @@
         android:text="Name"
         android:layout_height="wrap_content"/>
     <EditText
+        android:drawableLeft="@drawable/contact"
         android:id="@+id/ed1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -28,6 +29,7 @@
         android:layout_height="wrap_content"
         android:text="ADM NO"/>
     <EditText
+        android:drawableLeft="@drawable/adm"
         android:id="@+id/ed2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -38,17 +40,19 @@
         android:layout_height="wrap_content"
         android:text="System No"/>
     <EditText
+        android:drawableLeft="@drawable/sys"
         android:id="@+id/ed3"
         android:inputType="number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter System No"/>3
+        android:hint="Enter System No"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Department"/>
     <EditText
+        android:drawableLeft="@drawable/dept"
         android:id="@+id/ed4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

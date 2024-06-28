@@ -4,20 +4,19 @@
     android:gravity="center"
     android:padding="70px"
     xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView
-        android:layout_width="match_parent"
-        android:textSize="25dp"
-        android:layout_marginBottom="45dp"
-        android:textStyle="bold"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:text="ENTRY LOG"/>
+
+    <ImageView
+        android:layout_width="387dp"
+        android:layout_height="100px"
+        android:background="@drawable/fisatlogo"
+        android:layout_marginBottom="90dp"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Username"/>
     <EditText
+        android:drawableLeft="@drawable/contact"
         android:id="@+id/ed1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -29,12 +28,13 @@
         android:text="Password"/>
     <EditText
         android:id="@+id/ed2"
+        android:drawableLeft="@drawable/lock"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter your password"/>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:background="#D97E62"
+        android:background="@color/d97e62"
         android:textColor="@color/white"
         android:id="@+id/bt1"
         android:layout_width="match_parent"
